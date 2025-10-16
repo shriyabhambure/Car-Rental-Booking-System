@@ -54,7 +54,7 @@ app.post('/api/signup', async (req, res) => {
   }
 });
 
-// JWT Login route (updated)
+// JWT Login route 
 app.post('/api/login', async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -95,13 +95,6 @@ app.get('/api/cars', async (req, res) => {
     res.status(400).json({ error: err.message });
   }
 });
-
-// Example JWT-protected route!
-app.get('/api/profile', authenticateToken, (req, res) => {
-  res.json({ message: 'You are authorized!', user: req.user });
-});
-
-// ----------- No booking routes here, handled in bookingdetails.js -----------
 
 const PORT = 5000;
 app.listen(PORT, () => console.log(`Backend running on port ${PORT}`));
