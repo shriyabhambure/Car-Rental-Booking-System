@@ -59,7 +59,6 @@ function Register({ onRegister }) {
           {registerError && <div className="auth-error">{registerError}</div>}
           {success && <div className="auth-success">{success}</div>}
         </form>
-        {/* You can add a login link here if you want in future */}
       </div>
     </div>
   );
