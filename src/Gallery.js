@@ -50,8 +50,8 @@ function Gallery({ onCarClick, isLoggedIn }) {
         startDate: formData.startDate,
         endDate: formData.endDate
       });
-      setMessage("Booking successful!");
-      setSelectedCar(null);
+      //Show an alert on booking success
+      alert("Booking successful!");
     } catch (err) {
       setMessage("Booking failed. Please try again.");
     }
